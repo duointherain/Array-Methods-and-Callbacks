@@ -22,20 +22,33 @@ console.log(wishItWorked[0]['Away Team Name']);
 console.log(wishItWorked[0]['Home Team Goals']);
 console.log(wishItWorked[0]['Away Team Goals']);
 console.log(wishItWorked[0]['Win conditions']);
+//console.log(wishItWorked[0]['Stage']);
 
 
+let wishItWorked2 = fifaData.filter(item => {
+    return item.Stage === 'Final'
+    
+})
 
+console.log(wishItWorked2);
 
 
 
 
 /* Task 2: Create a function called  getFinals that takes `data` as an argument and returns an array of objects with only finals data */
 console.log("***Task 2****");
-function getFinals(/* code here */) {
 
-    /* code here */
-
+function getFinals(data) {
+    let wishItWorked3 = fifaData.filter(item => {
+        return item.Stage === 'Final'
+        
+        
+    })
+    console.log(wishItWorked3);
 };
+
+console.log(getFinals(fifaData));
+
 console.log("***Task 3****");
 /* Task 3: Implement a higher-order function called `getYears` that accepts the callback function `getFinals`, and returns an array called `years` containing all of the years in the dataset */
 
